@@ -1,0 +1,6 @@
+from spacy import displacy
+import spacy
+sp = spacy.load('en_core_web_sm')
+sen = sp(u"I like to play football. I hated it in my childhood though")
+displacy.render(sen, style='dep', jupyter=True, options={'distance': 85})
+displacy.serve(sen, style='dep', options={'distance': 120})
